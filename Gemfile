@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gem 'activerecord', '< 5.0.0'
+gem 'dotenv'
+gem 'heroku'
+gem 'oauth2'
+gem 'pg'
+gem 'sinatra'
+gem 'sinatra-activerecord'
+gem 'sinatra-strong-params'
+gem 'rake'
+gem 'rest-client', '1.6.8'
+gem 'jwt'
