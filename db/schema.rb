@@ -19,5 +19,4 @@ ActiveRecord::Schema.define(version: 20170723184459) do
     t.string "user_name"
     t.string "email"
   end
-
 end

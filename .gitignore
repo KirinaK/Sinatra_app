@@ -1,0 +1,5 @@
+*.rsa
+*.rsa.pub
+*.env
+config/database.yml
+config/environments.rb

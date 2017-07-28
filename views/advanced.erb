@@ -4,21 +4,23 @@
   <body>
     <p>Well, well, well, <%= login %>!</p>
     <p>
-      <% if !email.nil? %> It looks like your public email address is <%= email %>.
-      <a href='/logout'>Logout</a>
-      <% else %> It looks like you don't have a public email. That's cool.
+      <% if email %>
+        It looks like your public email address is <%= email %>.
+        <a href='/logout'>Logout</a>
+      <% else %>
+        It looks like you don't have a public email. That's cool.
       <% end %>
     </p>
     <p>
-      <% if defined? private_emails %>
-      With your permission, we were also able to dig up your private email addresses:
-      <%= private_emails.map{ |private_email_address| private_email_address["email"] }.join(', ') %>
-      <br>
-      <a href='/logout'>Logout</a>
-      <a href='/show_users'>Show Users</a>
-      <a href="https://github.com/<%= current_user_id %>" target='_blank'>Current user</a>
+      <% if private_emails %>
+        With your permission, we were also able to dig up your private email addresses:
+        <%= private_emails.map{ |private_email_address| private_email_address["email"] }.join(', ') %>
+        <br>
+        <a href='/logout'>Logout</a>
+        <a href='/show_users'>Show Users</a>
+        <a href="https://github.com/<%= current_user_id %>" target='_blank'>Current user</a>
       <% else %>
-      Also, you're a bit secretive about your private email addresses.
+        Also, you're a bit secretive about your private email addresses.
       <% end %>
     </p>
   </body>
